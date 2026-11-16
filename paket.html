@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Packages | NetConnect</title>
+
+    <link rel="stylesheet" href="paket.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="web.html" class="logo">
+            <i class="fa-solid fa-wifi"></i>
+            NetConnect
+        </a>
+
+        <a href="web.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
+    </header>
+
+    <!-- PACKAGES -->
+    <main class="packages-section">
+
+        <div class="section-heading">
+            <span class="eyebrow">OUR INTERNET PLANS</span>
+            <h1>Choose Your Package</h1>
+            <p>Find the perfect internet plan for your needs.</p>
+        </div>
+
+        <div class="packages-grid">
+
+            <!-- BASIC -->
+            <article class="package-card">
+                <div class="package-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <h2>Basic Package</h2>
+                <p class="speed">20 <span>Mbps</span></p>
+
+                <div class="price">
+                    Rp150.000
+                    <span>/month</span>
+                </div>
+
+                <label for="basic-popup" class="view-button">
+                    View Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </label>
+            </article>
+
+            <!-- FAMILY -->
+            <article class="package-card featured">
+                <span class="popular-label">MOST POPULAR</span>
+
+                <div class="package-icon">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+
+                <h2>Family Package</h2>
+                <p class="speed">40 <span>Mbps</span></p>
+
+                <div class="price">
+                    Rp200.000
+                    <span>/month</span>
+                </div>
+
+                <label for="family-popup" class="view-button">
+                    View Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </label>
+            </article>
+
+            <!-- GAMING -->
+            <article class="package-card">
+                <div class="package-icon">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+
+                <h2>Gaming Package</h2>
+                <p class="speed">75 <span>Mbps</span></p>
+
+                <div class="price">
+                    Rp275.000
+                    <span>/month</span>
+                </div>
+
+                <label for="gaming-popup" class="view-button">
+                    View Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </label>
+            </article>
+
+            <!-- ULTRA -->
+            <article class="package-card">
+                <div class="package-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h2>Ultra Package</h2>
+                <p class="speed">100 <span>Mbps</span></p>
+
+                <div class="price">
+                    Rp350.000
+                    <span>/month</span>
+                </div>
+
+                <label for="ultra-popup" class="view-button">
+                    View Package
+                    <i class="fa-solid fa-arrow-right"></i>
+                </label>
+            </article>
+
+        </div>
+    </main>
+
+
+    <!-- ===================================== -->
+    <!-- POPUP CHECKBOXES - NO JAVASCRIPT -->
+    <!-- ===================================== -->
+
+    <input type="checkbox" id="basic-popup" class="popup-toggle">
+    <input type="checkbox" id="family-popup" class="popup-toggle">
+    <input type="checkbox" id="gaming-popup" class="popup-toggle">
+    <input type="checkbox" id="ultra-popup" class="popup-toggle">
+
+
+    <!-- ===================================== -->
+    <!-- BASIC POPUP -->
+    <!-- ===================================== -->
+
+    <div class="modal-overlay basic-modal">
+        <label for="basic-popup" class="overlay-close"
+               aria-label="Close popup"></label>
+
+        <section class="modal" role="dialog" aria-modal="true">
+            <label for="basic-popup" class="close-button"
+                   aria-label="Close popup">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-house"></i>
+            </div>
+
+            <span class="modal-label">PACKAGE DETAILS</span>
+            <h2>Basic Package</h2>
+
+            <p class="modal-description">
+                An affordable and reliable internet connection
+                for your everyday online activities.
+            </p>
+
+            <div class="modal-price-box">
+                <div>
+                    <span class="detail-label">Internet Speed</span>
+                    <strong>20 Mbps</strong>
+                </div>
+
+                <div>
+                    <span class="detail-label">Monthly Price</span>
+                    <strong>Rp150.000</strong>
+                </div>
+            </div>
+
+            <h3>What's Included?</h3>
+
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Stable connection for everyday use</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Browsing, online learning, and social media</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Recommended for 1–3 devices</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Unlimited internet usage</li>
+            </ul>
+
+            <p class="installation-note">
+                <i class="fa-solid fa-circle-info"></i>
+                Installation fees are subject to applicable
+                terms and conditions.
+            </p>
+
+            <label for="basic-popup" class="got-it-button">
+                Close Details
+            </label>
+        </section>
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- FAMILY POPUP -->
+    <!-- ===================================== -->
+
+    <div class="modal-overlay family-modal">
+        <label for="family-popup" class="overlay-close"
+               aria-label="Close popup"></label>
+
+        <section class="modal" role="dialog" aria-modal="true">
+            <label for="family-popup" class="close-button"
+                   aria-label="Close popup">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-people-roof"></i>
+            </div>
+
+            <span class="modal-label">PACKAGE DETAILS</span>
+            <h2>Family Package</h2>
+
+            <p class="modal-description">
+                A comfortable internet plan for the whole family
+                to stay connected throughout the day.
+            </p>
+
+            <div class="modal-price-box">
+                <div>
+                    <span class="detail-label">Internet Speed</span>
+                    <strong>40 Mbps</strong>
+                </div>
+
+                <div>
+                    <span class="detail-label">Monthly Price</span>
+                    <strong>Rp200.000</strong>
+                </div>
+            </div>
+
+            <h3>What's Included?</h3>
+
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Suitable for the whole family</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Streaming, online learning, and browsing</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Recommended for 3–6 devices</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Unlimited internet usage</li>
+            </ul>
+
+            <p class="installation-note">
+                <i class="fa-solid fa-circle-info"></i>
+                Installation fees are subject to applicable
+                terms and conditions.
+            </p>
+
+            <label for="family-popup" class="got-it-button">
+                Close Details
+            </label>
+        </section>
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- GAMING POPUP -->
+    <!-- ===================================== -->
+
+    <div class="modal-overlay gaming-modal">
+        <label for="gaming-popup" class="overlay-close"
+               aria-label="Close popup"></label>
+
+        <section class="modal" role="dialog" aria-modal="true">
+            <label for="gaming-popup" class="close-button"
+                   aria-label="Close popup">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+
+            <span class="modal-label">PACKAGE DETAILS</span>
+            <h2>Gaming Package</h2>
+
+            <p class="modal-description">
+                A faster internet plan for gaming, streaming,
+                and users who frequently download large files.
+            </p>
+
+            <div class="modal-price-box">
+                <div>
+                    <span class="detail-label">Internet Speed</span>
+                    <strong>75 Mbps</strong>
+                </div>
+
+                <div>
+                    <span class="detail-label">Monthly Price</span>
+                    <strong>Rp275.000</strong>
+                </div>
+            </div>
+
+            <h3>What's Included?</h3>
+
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Designed for gaming and streaming activities</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Supports multiple connected devices</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Suitable for gaming and large downloads</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Recommended for 5–8 devices</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Unlimited internet usage</li>
+            </ul>
+
+            <p class="installation-note">
+                <i class="fa-solid fa-circle-info"></i>
+                Installation fees are subject to applicable
+                terms and conditions.
+            </p>
+
+            <label for="gaming-popup" class="got-it-button">
+                Close Details
+            </label>
+        </section>
+    </div>
+
+
+    <!-- ===================================== -->
+    <!-- ULTRA POPUP -->
+    <!-- ===================================== -->
+
+    <div class="modal-overlay ultra-modal">
+        <label for="ultra-popup" class="overlay-close"
+               aria-label="Close popup"></label>
+
+        <section class="modal" role="dialog" aria-modal="true">
+            <label for="ultra-popup" class="close-button"
+                   aria-label="Close popup">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <span class="modal-label">PACKAGE DETAILS</span>
+            <h2>Ultra Package</h2>
+
+            <p class="modal-description">
+                High-speed internet for demanding online activities,
+                from high-quality entertainment to working remotely.
+            </p>
+
+            <div class="modal-price-box">
+                <div>
+                    <span class="detail-label">Internet Speed</span>
+                    <strong>100 Mbps</strong>
+                </div>
+
+                <div>
+                    <span class="detail-label">Monthly Price</span>
+                    <strong>Rp350.000</strong>
+                </div>
+            </div>
+
+            <h3>What's Included?</h3>
+
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i>
+                    High-speed connection for various activities</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    High-quality streaming and gaming</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Suitable for working from home</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Recommended for 8–10 devices</li>
+                <li><i class="fa-solid fa-circle-check"></i>
+                    Unlimited internet usage</li>
+            </ul>
+
+            <p class="installation-note">
+                <i class="fa-solid fa-circle-info"></i>
+                Installation fees are subject to applicable
+                terms and conditions.
+            </p>
+
+            <label for="ultra-popup" class="got-it-button">
+                Close Details
+            </label>
+        </section>
+    </div>
+
+</body>
+</html>

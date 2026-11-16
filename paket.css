@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #087cf0;
+    --dark-blue: #0755b5;
+    --text: #14213d;
+    --muted: #69778d;
+    --light-blue: #eef6ff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f9ff;
+    color: var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    min-height: 95px;
+    padding: 22px 7%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 24px rgba(20, 50, 90, 0.06);
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 32px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.25s;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.back-link i {
+    margin-right: 8px;
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.packages-section {
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+    padding: 90px 5% 120px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    background: #e5f1ff;
+    padding: 11px 22px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.section-heading h1 {
+    font-size: clamp(40px, 4vw, 60px);
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 21px;
+}
+
+/* =========================
+   PACKAGE CARDS
+========================= */
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.package-card {
+    position: relative;
+    background: #ffffff;
+    border: 2px solid #e6edf7;
+    border-radius: 26px;
+    padding: 42px 25px 32px;
+    text-align: center;
+    min-height: 410px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 12px 35px rgba(31, 72, 125, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-9px);
+    border-color: #8fc5ff;
+    box-shadow: 0 22px 45px rgba(31, 105, 200, 0.14);
+}
+
+.package-icon {
+    width: 82px;
+    height: 82px;
+    border-radius: 23px;
+    background: var(--light-blue);
+    color: var(--primary);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 34px;
+    margin-bottom: 28px;
+}
+
+.package-card h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.speed {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--primary);
+    margin-bottom: 22px;
+}
+
+.speed span {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 30px;
+}
+
+.price span {
+    display: block;
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+/* VIEW PACKAGE BUTTON */
+
+.view-button {
+    width: 100%;
+    min-height: 60px;
+    margin-top: auto;
+    padding: 16px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 14px;
+    background: var(--primary);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.view-button:hover {
+    background: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+/* FEATURED PACKAGE */
+
+.package-card.featured {
+    border: 2px solid var(--primary);
+    background: linear-gradient(
+        180deg,
+        #eff7ff 0%,
+        #ffffff 60%
+    );
+}
+
+.popular-label {
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: var(--primary);
+    color: #ffffff;
+
+    padding: 9px 17px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   HIDE CHECKBOXES
+========================= */
+
+.popup-toggle {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =========================
+   POPUP OVERLAY
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    padding: 24px;
+    background: rgba(7, 22, 46, 0.75);
+    backdrop-filter: blur(7px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+}
+
+/* SHOW POPUP USING CSS ONLY */
+
+#basic-popup:checked ~ .basic-modal,
+#family-popup:checked ~ .family-modal,
+#gaming-popup:checked ~ .gaming-modal,
+#ultra-popup:checked ~ .ultra-modal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* CLICK OUTSIDE TO CLOSE */
+
+.overlay-close {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+/* =========================
+   POPUP CONTENT
+========================= */
+
+.modal {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 680px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+
+    padding: 48px;
+    border-radius: 28px;
+    background: #ffffff;
+
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(22px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+#basic-popup:checked ~ .basic-modal .modal,
+#family-popup:checked ~ .family-modal .modal,
+#gaming-popup:checked ~ .gaming-modal .modal,
+#ultra-popup:checked ~ .ultra-modal .modal {
+    transform: translateY(0) scale(1);
+}
+
+/* CLOSE BUTTON */
+
+.close-button {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: #edf3fa;
+    color: var(--text);
+
+    font-size: 21px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.close-button:hover {
+    background: #dceaff;
+    color: var(--primary);
+}
+
+/* POPUP ICON */
+
+.modal-icon {
+    width: 78px;
+    height: 78px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--light-blue);
+    color: var(--primary);
+
+    border-radius: 23px;
+    font-size: 34px;
+    margin-bottom: 24px;
+}
+
+.modal-label {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.modal h2 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin: 13px 0 17px;
+}
+
+.modal-description {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* SPEED AND PRICE BOX */
+
+.modal-price-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+
+    background: #f2f7ff;
+    border-radius: 19px;
+    padding: 25px;
+
+    margin-bottom: 30px;
+}
+
+.detail-label {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 11px;
+}
+
+.modal-price-box strong {
+    display: block;
+    font-size: 23px;
+    line-height: 1.4;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+/* FEATURES */
+
+.modal h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    color: #35445d;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.feature-list li i {
+    color: #16a66a;
+    font-size: 19px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+/* INSTALLATION NOTE */
+
+.installation-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    background: #fff8e8;
+    color: #795719;
+
+    border-radius: 13px;
+    padding: 17px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 26px;
+}
+
+.installation-note i {
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+/* CLOSE DETAILS BUTTON */
+
+.got-it-button {
+    width: 100%;
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 14px;
+    background: var(--primary);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.got-it-button:hover {
+    background: var(--dark-blue);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1250px) {
+    .packages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        min-height: 78px;
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .back-link {
+        font-size: 13px;
+    }
+
+    .packages-section {
+        padding: 60px 5% 80px;
+    }
+
+    .section-heading {
+        margin-bottom: 48px;
+    }
+
+    .section-heading h1 {
+        font-size: 36px;
+    }
+
+    .section-heading p {
+        font-size: 16px;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .package-card {
+        min-height: 380px;
+        padding: 36px 26px 30px;
+    }
+
+    .modal-overlay {
+        padding: 14px;
+    }
+
+    .modal {
+        max-height: calc(100vh - 28px);
+        padding: 34px 23px;
+        border-radius: 23px;
+    }
+
+    .modal h2 {
+        font-size: 29px;
+        padding-right: 25px;
+    }
+
+    .modal-description {
+        font-size: 15px;
+    }
+
+    .modal-price-box {
+        padding: 18px 13px;
+        gap: 12px;
+    }
+
+    .modal-price-box strong {
+        font-size: 18px;
+    }
+
+    .detail-label {
+        font-size: 12px;
+    }
+
+    .feature-list li {
+        font-size: 14px;
+    }
+}
+
+/* ACCESSIBILITY: REDUCE ANIMATION */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
